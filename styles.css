@@ -1,0 +1,39 @@
+
+/* presets */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #270457;
+  --heading-color: #5b1ac0;
+  --secondary-color: #BFCDE0;
+  --highlight-color: #EE4266;
+  --text-color: #BFCDE0;
+}
+
+body,p,footer,.intro, .resume, .projects {
+  display: flex;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color)
+
+}
+
+h1 {
+  font-size: 3rem; /* =16px */
+}
+
+h2 {
+  font-size: 2.25rem; /* = 36px */
+}
+
+/*NAV AND HEADER*/
+
+/*SECTIONS*/
+
+
+
+
+
+
