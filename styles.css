@@ -1,4 +1,84 @@
 
+/*FONTS*/
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 300 to 800 */
+
+.open-sans-custom {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Replace <weight> with the actual weight you need */
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 /* presets */
 * {
   box-sizing: border-box;
@@ -6,13 +86,14 @@
 
 :root {
   --primary-color: #270457;
-  --heading-color: #5b1ac0;
-  --secondary-color: #BFCDE0;
+  --secondary-color: #5b1ac0;
+  --heading-color: #BFCDE0;
   --highlight-color: #EE4266;
-  --text-color: #BFCDE0;
+  --text-color: #FFFCFD;
 }
 
-body,p,footer,.intro, .resume, .projects {
+
+body, header, p, footer,.intro, .resume, .projects {
   display: flex;
   font-size: 20px;
   background-color: var(--primary-color);
@@ -20,8 +101,12 @@ body,p,footer,.intro, .resume, .projects {
 
 }
 
+
 h1 {
   font-size: 3rem; /* =16px */
+  font-family: 'lato', sans-serif;
+  color: var(--heading-color)
+
 }
 
 h2 {
@@ -30,7 +115,93 @@ h2 {
 
 /*NAV AND HEADER*/
 
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  background-color: var(--primary-color); /* Uses the primary color variable for background */
+  background-image: url('images/purple-neon.jpg'); /* Background image */
+  background-size: cover; /* Ensures the image covers the header area without repeating */
+  min-height: 50vh; /* Minimum height to maintain visual impact */
+}
+
+
+
+nav {
+  display: flex;
+  width: 100%;
+  min-height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  margin: 0; /* Removes default margin */
+  
+}
+
+nav ul li {
+  margin: 0 10px; /* Adds horizontal spacing between items */
+  padding: 10px 20px; /* Padding for clickable area */
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: rgba(39, 4, 87, 0.8); 
+  border: solid;
+  border-color: var(--primary-color);
+  
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Ensures the last element does not have extra padding */
+} 
+
+nav ul li a {
+  display: block; /* Makes the <a> tag fill the entire li */
+  padding: 10px 20px; /* Adds padding inside the a, making it easier to click */
+  text-decoration: none; /* Optional: removes underline from links */
+  color: inherit; /* Inherits the color from the parent li */
+  
+}
+
+nav ul li a:hover {
+  background-color: var(--highlight-color); /* Hover effect */
+}
+
 /*SECTIONS*/
+
+/* Hero */
+
+.hero-textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(39, 4, 87, 0.8); 
+  border: solid;
+  border-color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.hero-textbox h1, h2 {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-textbox h1 {
+  color: var(--heading-color)
+}
+
+.hero-textbox h2 {
+  color: var(--text-color)
+}
 
 
 
